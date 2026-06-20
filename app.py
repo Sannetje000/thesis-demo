@@ -15,12 +15,10 @@ p {
     padding-left: 0.2rem;
 }
 .stButton > button {
-    width: 100% !important;
-    text-align: center !important;
-    background-color: #c9c0e7 !important;
+    background-color: #e8e8e8 !important;
 }
 .stTextArea textarea::placeholder {
-    color:  !important;
+    color: #ffffff !important;
     font-style: italic !important;
 }
 div[data-testid="stTextArea"] {
@@ -83,7 +81,7 @@ for i, ex in enumerate(EXAMPLES):
             st.session_state["input_sentence"] = ex["nl"]
         st.markdown("<p style='font-size:1em;font-style: italic;margin-top:-10px;'>"+ex["en"]+"</p>", unsafe_allow_html=True)
 
-st.markdown("<p style='font-weight:bold;margin-bottom:+2px;font-size:1.2em;'>Or enter your own Dutch sentence:</p>", unsafe_allow_html=True)
+st.markdown("<p style='font-weight:bold;margin-bottom:+2px;font-size:1.2em;'>Or type your own:</p>", unsafe_allow_html=True)
 
 sentence = st.text_area(
     "",
