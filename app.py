@@ -61,7 +61,7 @@ def classify(sentences, tokenizer, model):
         results.append({"Sentence": sentence, "P(non-content)": round(prob, 3), "Label": label})
     return results
 
-st.markdown("<h4 style='margin-bottom: 0rem;'>Dutch Blurb Sentence Classifier</h3>", unsafe_allow_html=True)
+st.markdown("<h4.5 style='margin-bottom: 0rem;'>Dutch Blurb Sentence Classifier</h3>", unsafe_allow_html=True)
 
 st.markdown("<p style='font-weight:bold;margin-bottom:+2px;font-size:1.1em;'>Try an example:</p>", unsafe_allow_html=True)
 cols = st.columns(len(EXAMPLES))
