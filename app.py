@@ -5,6 +5,15 @@ import torch
 import torch.nn.functional as F
 import re
 
+st.markdown("""
+<style>
+.block-container {
+    padding-top: 1rem;
+}
+</style>
+""", unsafe_allow_html=True)
+
+
 THRESHOLD = 0.62
 MODEL_NAME = "Sanneeeeeeeee/robert-blurb-classifier"
 TOKENIZER_NAME = "pdelobelle/robbert-v2-dutch-base"
