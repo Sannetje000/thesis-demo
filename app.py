@@ -11,7 +11,7 @@ st.markdown("""
     padding-top: 2rem;
 }
 div[data-testid="stMarkdownContainer"] p {
-    margin-bottom: -5px;
+    margin-bottom: -2px;
 }
 div[data-testid="stVerticalBlock"] {
     gap: 0rem;
