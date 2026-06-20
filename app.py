@@ -8,11 +8,14 @@ import re
 st.markdown("""
 <style>
 .block-container {
-    padding-top: 1.6rem;
+    padding-top: 0.5rem;
+}
+div[data-testid="stButton"] button {
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
 }
 </style>
 """, unsafe_allow_html=True)
-
 
 THRESHOLD = 0.62
 MODEL_NAME = "Sanneeeeeeeee/robert-blurb-classifier"
@@ -60,7 +63,7 @@ def classify(sentences, tokenizer, model):
 st.markdown("<h2 style='text-align: center;'>Dutch Blurb Sentence Classifier</h2>", unsafe_allow_html=True)
 st.markdown("<h4 style='text-align: center; font-weight: normal; font-style: italic;'>Enter a Dutch sentence that could appear in a book blurb.</h4>", unsafe_allow_html=True)
 st.markdown("""
-<p style='color:#000000; font-size:0.95em'>
+st.markdown(f"<p style='font-size:0.8em; color:#000000; margin-top:-10px;'>{ex['en']}</p>", unsafe_allow_html=True)
 <span style='color:#6AAAD4; font-size:1.2em'>●</span> <b style='color:#6AAAD4'>Content</b>: sentences describing the story, characters, or setting<br>
 <span style='color:#E08070; font-size:1.2em'>●</span> <b style='color:#E08070'>Non-content</b>: promotional text, author credits, critic quotes, or other metadata
 </p>
