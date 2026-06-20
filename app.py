@@ -82,6 +82,7 @@ sentence = st.text_area(
     key="input_sentence"
 )
 
+
 st.markdown("""
 <p style='color:#000000; font-size:0.95em'>
 <span style='color:#6AAAD4; font-size:1.2em'>●</span> <b style='color:#6AAAD4'>Content</b>: sentences describing the story, characters, or setting<br>
@@ -89,7 +90,6 @@ st.markdown("""
 </p>
 """, unsafe_allow_html=True)
 
-if st.button("Classify"):
 
 if st.button("Classify"):
     if not sentence.strip():
