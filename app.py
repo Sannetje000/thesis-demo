@@ -63,12 +63,13 @@ st.markdown("""
 </p>
 """, unsafe_allow_html=True)
 
-st.markdown("**Try an example:**")
+st.markdown("*Try an example:*")
+cols = st.columns(len(EXAMPLES))
 for i, ex in enumerate(EXAMPLES):
-    label = "🔵 Content" if ex["expected"] == "Content" else "🟠 Non-content"
-    if st.button(f"{label}: {ex['nl'][:50]}...", key=f"ex_{i}"):
-        st.session_state["input_sentence"] = ex["nl"]
-    st.caption(ex["en"])
+    with cols[i]:
+        if st.button(f"Example {i+1}", key=f"ex_{i}"):
+            st.session_state["input_sentence"] = ex["nl"]
+        st.caption(ex["en"])
 
 sentence = st.text_area(
     "Dutch sentence",
