@@ -8,7 +8,7 @@ import re
 st.markdown("""
 <style>
 .block-container {
-    padding-top: 3rem;
+    padding-top: 1rem;
 }
 p {
     line-height: 1.2;
