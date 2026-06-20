@@ -71,7 +71,7 @@ for i, ex in enumerate(EXAMPLES):
             st.session_state["input_sentence"] = ex["nl"]
         st.markdown("<p style='font-size:1em;font-style: italic;margin-top:-10px;'>"+ex["en"]+"</p>", unsafe_allow_html=True)
 
-st.markdown("<p style='font-weight:bold;margin-bottom:+2px;margin-top: 0.7rem;font-size:1.1em;'>Or enter your own Dutch sentence:</p>", unsafe_allow_html=True)
+st.markdown("<p style='font-weight:bold;margin-bottom:+2px;margin-top: +1rem;font-size:1.1em;'>Or enter your own Dutch sentence:</p>", unsafe_allow_html=True)
 
 st.markdown("""
 <p style='color:#000000; font-size:0.95em'>
