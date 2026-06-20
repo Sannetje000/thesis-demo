@@ -14,14 +14,14 @@ p {
     line-height: 1.2;
     padding-left: 0.2rem;
 }
-div[data-testid="stButton"] button {
+.stButton > button {
     width: 100% !important;
     text-align: center !important;
     background-color: #EDE9F5 !important;
 }
-textarea::placeholder {
-    color: #ffffff;
-    font-style: italic;
+.stTextArea textarea::placeholder {
+    color: #dddddd !important;
+    font-style: italic !important;
 }
 div[data-testid="stTextArea"] {
     margin-top: -30px;
