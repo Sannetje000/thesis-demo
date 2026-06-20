@@ -72,7 +72,7 @@ for i, ex in enumerate(EXAMPLES):
         st.caption(ex["en"])
 
 sentence = st.text_area(
-    "**Or enter your own Dutch sentence**",
+    "**Or enter your own Dutch sentence:**",
     value=st.session_state.get("input_sentence", ""),
     height=100,
     key="input_sentence"
@@ -87,10 +87,12 @@ if st.button("Classify"):
         results = classify(sentences, tokenizer, model)
         for r in results:
             color = "#378ADD" if r["Label"] == "Content" else "#D85A30"
+            ```python
             st.markdown(
                 f"<div style='padding:12px; margin:6px 0; border-radius:8px; background:#c9c0e7; color:#000000; text-align:center;'>"
-                f"<b style='color:{color}; font-size:1.3em'>● {r['Label']}</b><br/>"
-                f"<span style='font-size:0.9em'>P(non-content): {r['P(non-content)']}</span>"
+                f"<b style='color:{color}; font-size:1.3em'>● {r['Label']} sentence</b><br/>"
+                f"<span style='font-size:0.9em; color:#000000'>The model classified your sentence as <b>{r['Label'].lower()}</b>.</span><br/>"
+                f"<span style='font-size:0.85em; color:#000000'>P(non-content): {r['P(non-content)']}</span>"
                 f"</div>",
                 unsafe_allow_html=True
             )
