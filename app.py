@@ -10,10 +10,6 @@ st.markdown("""
 .block-container {
     padding-top: 2rem;
 }
-
-div[data-testid="stVerticalBlock"] {
-    gap: 0rem;
-}
 p {
     line-height: 1.2;
     padding-left: 0.2rem;
