@@ -15,7 +15,7 @@ p {
     padding-left: 0.2rem;
 }
 .stButton > button {
-    background-color: #e8e8e8 !important;
+    background-color: #ffffff !important;
 }
 .stTextArea textarea::placeholder {
     color: #ffffff !important;
