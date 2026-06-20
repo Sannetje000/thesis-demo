@@ -13,8 +13,12 @@ st.markdown("""
 div[data-testid="stCaptionContainer"] {
     margin-top: -15px;
 }
+p {
+    margin-bottom: 0.3rem;
+}
 </style>
 """, unsafe_allow_html=True)
+
 
 THRESHOLD = 0.62
 MODEL_NAME = "Sanneeeeeeeee/robert-blurb-classifier"
