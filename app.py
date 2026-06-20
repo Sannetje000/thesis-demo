@@ -88,10 +88,10 @@ if st.button("Classify"):
         for r in results:
             color = "#378ADD" if r["Label"] == "Content" else "#D85A30"
             st.markdown(
-                f"<div style='padding:12px; margin:6px 0; border-radius:8px; background:#c9c0e7; color:#000000; text-align:center;'>"
+                f"<div style='padding:12px; margin:6px 0; border-radius:8px; background:#ffffff; border: 1px solid #000000; color:#000000; text-align:center;'>"
                 f"<b style='color:{color}; font-size:1.3em'>● {r['Label']} sentence</b><br/>"
                 f"<span style='font-size:0.9em; color:#000000'>The model classified your sentence as <b>{r['Label'].lower()}</b>.</span><br/>"
-                f"<span style='font-size:0.85em; color:#000000'>P(non-content): {r['P(non-content)']}</span>"
+                f"<span style='font-size:0.85em; color:#000000'>Non-content probability: {int(r['P(non-content)']*100)}% (threshold: 62%)</span>"
                 f"</div>",
                 unsafe_allow_html=True
             )
