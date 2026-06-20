@@ -15,7 +15,7 @@ p {
     padding-left: 0.2rem;
 }
 div[data-testid="stTextArea"] {
-    margin-top: -35px;
+    margin-top: -30px;
 }
 </style>
 """, unsafe_allow_html=True)
@@ -87,7 +87,8 @@ sentence = st.text_area(
     "",
     value=st.session_state.get("input_sentence", ""),
     height=100,
-    key="input_sentence"
+    key="input_sentence",
+    placeholder="Type a Dutch sentence or select an example"
 )
 
 if st.button("Classify"):
