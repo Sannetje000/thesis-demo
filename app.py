@@ -10,8 +10,8 @@ st.markdown("""
 .block-container {
     padding-top: 2rem;
 }
-div[data-testid="stCaptionContainer"] {
-    margin-top: -15px;
+div[data-testid="stMarkdownContainer"] p {
+    margin-bottom: -10px;
 }
 div[data-testid="stVerticalBlock"] {
     gap: 0rem;
