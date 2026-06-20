@@ -15,7 +15,7 @@ div[data-testid="stCaptionContainer"] {
 }
 p {
     margin-bottom: 0.3rem;
-    padding-left: 0.3rem;
+    padding-left: 0.2rem;
 }
 </style>
 """, unsafe_allow_html=True)
