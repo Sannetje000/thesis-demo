@@ -13,6 +13,9 @@ st.markdown("""
 div[data-testid="stCaptionContainer"] {
     margin-top: -15px;
 }
+div[data-testid="stVerticalBlock"] {
+    gap: 0rem;
+}
 p {
     line-height: 1.2;
     padding-left: 0.2rem;
