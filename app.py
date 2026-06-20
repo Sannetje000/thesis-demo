@@ -15,10 +15,10 @@ p {
     padding-left: 0.2rem;
 }
 .stButton > button {
-    background-color: #999999 !important;
+    background-color: #ffffff !important;
 }
 .stTextArea textarea::placeholder {
-    color: #c8c8c8 !important;
+    color: #999999 !important;
     font-style: italic !important;
 }
 div[data-testid="stTextArea"] {
