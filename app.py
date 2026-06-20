@@ -14,6 +14,10 @@ p {
     line-height: 1.2;
     padding-left: 0.2rem;
 }
+div[data-testid="stButton"] button {
+    text-align: center !important;
+    background-color: #EDE9F5 !important;
+}
 textarea::placeholder {
     color: #dddddd;
     font-style: italic;
