@@ -63,7 +63,7 @@ def classify(sentences, tokenizer, model):
 
 st.markdown("<h3 style='margin-bottom: 0rem;'>Dutch Blurb Sentence Classifier</h3>", unsafe_allow_html=True)
 
-st.markdown("<p style='font-weight:bold;margin-bottom:+4px;font-size:1.1em;'>Try an example:</p>", unsafe_allow_html=True)
+st.markdown("<p style='font-weight:bold;margin-bottom:+4px;font-size:1.3em;'>Try an example:</p>", unsafe_allow_html=True)
 cols = st.columns(len(EXAMPLES))
 for i, ex in enumerate(EXAMPLES):
     with cols[i]:
@@ -71,12 +71,12 @@ for i, ex in enumerate(EXAMPLES):
             st.session_state["input_sentence"] = ex["nl"]
         st.markdown("<p style='font-size:1em;font-style: italic;margin-top:-10px;'>"+ex["en"]+"</p>", unsafe_allow_html=True)
 
-st.markdown("<p style='font-weight:bold;margin-bottom:+2px;margin-top: +1rem;font-size:1.1em;'>Or enter your own Dutch sentence:</p>", unsafe_allow_html=True)
+st.markdown("<p style='font-weight:bold;margin-bottom:+2px;margin-top: +1rem;font-size:1.3em;'>Or enter your own Dutch sentence:</p>", unsafe_allow_html=True)
 
 st.markdown("""
 <p style='color:#000000; font-size:0.95em'>
-<span style='color:#6AAAD4; font-size:1.2em'>●</span> <b style='color:#6AAAD4'>Content</b>: sentences describing the story, characters, or setting<br>
-<span style='color:#E08070; font-size:1.2em'>●</span> <b style='color:#E08070'>Non-content</b>: promotional text, author credits, critic quotes, or other metadata
+<span style='color:#6AAAD4; font-size:1em'>●</span> <b style='color:#6AAAD4'>Content</b>: sentences describing the story, characters, or setting<br>
+<span style='color:#E08070; font-size:1em'>●</span> <b style='color:#E08070'>Non-content</b>: promotional text, author credits, critic quotes, or other metadata
 </p>
 """, unsafe_allow_html=True)
 
