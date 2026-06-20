@@ -57,9 +57,9 @@ def classify(sentences, tokenizer, model):
 st.markdown("<h2 style='text-align: center;'>Dutch Blurb Sentence Classifier</h2>", unsafe_allow_html=True)
 st.markdown("<h4 style='text-align: center; font-weight: normal; font-style: italic;'>Enter a Dutch sentence that could appear in a book blurb.</h4>", unsafe_allow_html=True)
 st.markdown("""
-<p style='color:#555; font-size:0.95em'>
-🔵 <b style='color:#378ADD'>Content</b> — sentences describing the story, characters, or setting<br>
-🟠 <b style='color:#D85A30'>Non-content</b> — promotional text, author credits, critic quotes, or metadata
+<p style='color:#000000; font-size:0.95em'>
+🔵 <b style='color:##A0C8EA'>Content</b> — sentences describing the story, characters, or setting<br>
+🟠 <b style='color:##EFAF9A'>Non-content</b> — promotional text, author credits, critic quotes, or metadata
 </p>
 """, unsafe_allow_html=True)
 
