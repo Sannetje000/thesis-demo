@@ -55,7 +55,7 @@ def classify(sentences, tokenizer, model):
     return results
 
 st.markdown("#### **Dutch Blurb Sentence Classifier**")
-st.markdown("#### Enter a Dutch sentence that could appear in a book blurb.")
+st.markdown("###### Enter a Dutch sentence that could appear in a book blurb.")
 st.markdown("""
 <p style='color:#555; font-size:0.95em'>
 🔵 <b style='color:#378ADD'>Content</b> — sentences describing the story, characters, or setting<br>
