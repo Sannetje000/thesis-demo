@@ -61,7 +61,7 @@ st.markdown("**Try an example:**")
 cols = st.columns(len(EXAMPLES))
 for i, ex in enumerate(EXAMPLES):
     with cols[i]:
-        if st.button(f"Example {i+1}", key=f"ex_{i}"):
+        if st.button(f"{'🔵' if ex['expected'] == 'Content' else '🟠'} {ex['nl'][:40]}...", key=f"ex_{i}"):
             st.session_state["input_sentence"] = ex["nl"]
         st.caption(ex["en"])
 
