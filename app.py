@@ -8,11 +8,10 @@ import re
 st.markdown("""
 <style>
 .block-container {
-    padding-top: 0.5rem;
+    padding-top: 2rem;
 }
-div[data-testid="stButton"] button {
-    padding-top: 0.2rem;
-    padding-bottom: 0.2rem;
+div[data-testid="stCaptionContainer"] {
+    margin-top: -15px;
 }
 </style>
 """, unsafe_allow_html=True)
