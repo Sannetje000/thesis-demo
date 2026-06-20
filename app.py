@@ -17,7 +17,7 @@ p {
 .stButton > button {
     width: 100% !important;
     text-align: center !important;
-    background-color: ##9280c8 !important;
+    background-color: #9280c8 !important;
 }
 .stTextArea textarea::placeholder {
     color:  !important;
