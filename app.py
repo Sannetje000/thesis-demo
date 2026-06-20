@@ -85,13 +85,6 @@ for i, ex in enumerate(EXAMPLES):
 
 st.markdown("<p style='font-weight:bold;margin-bottom:+2px;font-size:1.2em;'>Or enter your own Dutch sentence:</p>", unsafe_allow_html=True)
 
-st.markdown("""
-<p style='color:#000000; font-size:1em'>
-<span style='color:#6AAAD4; font-size:1em'>●</span> <b style='color:#6AAAD4'>Content</b>: sentences describing the story, characters, or setting<br>
-<span style='color:#E08070; font-size:1em'>●</span> <b style='color:#E08070'>Non-content</b>: promotional text, author credits, critic quotes, or other metadata
-</p>
-""", unsafe_allow_html=True)
-
 sentence = st.text_area(
     "",
     value=st.session_state.get("input_sentence", ""),
