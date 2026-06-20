@@ -20,7 +20,6 @@ p {
 </style>
 """, unsafe_allow_html=True)
 
-
 THRESHOLD = 0.62
 MODEL_NAME = "Sanneeeeeeeee/robert-blurb-classifier"
 TOKENIZER_NAME = "pdelobelle/robbert-v2-dutch-base"
@@ -39,7 +38,8 @@ EXAMPLES = [
     {
         "nl": "Geïllustreerd door de bekroonde kunstenaar Jan de Vries.",
         "en": "Illustrated by award-winning artist Jan de Vries.",
-        "expected": "Non-content"},
+        "expected": "Non-content"
+    },
 ]
 
 @st.cache_resource
@@ -65,23 +65,7 @@ def classify(sentences, tokenizer, model):
     return results
 
 st.markdown("<h3 style='text-align: center; margin-bottom: -1rem;'>Dutch Blurb Sentence Classifier</h3>", unsafe_allow_html=True)
-st.markdown("<h5 style='text-align: center; font-weight: normal; font-style: italic;'>Enter a Dutch sentence that could appear in a book blurb.</h4>", unsafe_allow_html=True)
-
-st.markdown("######**Try an example:**")
-cols = st.columns(len(EXAMPLES))
-for i, ex in enumerate(EXAMPLES):
-    with cols[i]:
-        if st.button(f"Example {i+1}", key=f"ex_{i}"):
-            st.session_state["input_sentence"] = ex["nl"]
-        st.caption(ex["en"])
-
-sentence = st.text_area(
-    "######**Or enter your own Dutch sentence:**",
-    value=st.session_state.get("input_sentence", ""),
-    height=100,
-    key="input_sentence"
-)
-
+st.markdown("<h5 style='text-align: center; font-weight: normal; font-style: italic;'>Enter a Dutch sentence that could appear in a book blurb.</h5>", unsafe_allow_html=True)
 
 st.markdown("""
 <p style='color:#000000; font-size:0.95em'>
@@ -90,6 +74,21 @@ st.markdown("""
 </p>
 """, unsafe_allow_html=True)
 
+st.markdown("<p style='font-weight:bold;'>Try an example:</p>", unsafe_allow_html=True)
+cols = st.columns(len(EXAMPLES))
+for i, ex in enumerate(EXAMPLES):
+    with cols[i]:
+        if st.button(f"Example {i+1}", key=f"ex_{i}"):
+            st.session_state["input_sentence"] = ex["nl"]
+        st.caption(ex["en"])
+
+st.markdown("<p style='font-weight:bold;'>Or enter your own Dutch sentence:</p>", unsafe_allow_html=True)
+sentence = st.text_area(
+    "",
+    value=st.session_state.get("input_sentence", ""),
+    height=100,
+    key="input_sentence"
+)
 
 if st.button("Classify"):
     if not sentence.strip():
