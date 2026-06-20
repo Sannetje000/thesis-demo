@@ -17,10 +17,10 @@ p {
 .stButton > button {
     width: 100% !important;
     text-align: center !important;
-    background-color: #EDE9F5 !important;
+    background-color: ##9280c8 !important;
 }
 .stTextArea textarea::placeholder {
-    color: #dddddd !important;
+    color:  !important;
     font-style: italic !important;
 }
 div[data-testid="stTextArea"] {
