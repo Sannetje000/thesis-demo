@@ -18,8 +18,8 @@ p {
     padding-left: 0.2rem;
 }
 div[data-testid="stButton"] button {
-    padding-top: 0.15rem;
-    padding-bottom: 0.15rem;
+    padding-top: 0.20rem;
+    padding-bottom: 0.20rem;
     font-size: 0.85em;
 }
 </style>
