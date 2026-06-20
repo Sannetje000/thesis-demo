@@ -14,8 +14,7 @@ div[data-testid="stCaptionContainer"] {
     margin-top: -15px;
 }
 p {
-    margin-bottom: 0.3rem;
-    margin-top: 0rem;
+    line-height: 1.2;
     padding-left: 0.2rem;
 }
 </style>
