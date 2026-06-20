@@ -15,11 +15,12 @@ p {
     padding-left: 0.2rem;
 }
 div[data-testid="stButton"] button {
+    width: 100% !important;
     text-align: center !important;
     background-color: #EDE9F5 !important;
 }
 textarea::placeholder {
-    color: #dddddd;
+    color: #ffffff;
     font-style: italic;
 }
 div[data-testid="stTextArea"] {
