@@ -8,7 +8,7 @@ import re
 st.markdown("""
 <style>
 .block-container {
-    padding-top: 1.5rem;
+    padding-top: 1.6rem;
 }
 </style>
 """, unsafe_allow_html=True)
