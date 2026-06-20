@@ -17,10 +17,6 @@ p {
     line-height: 1.2;
     padding-left: 0.2rem;
 }
-button[kind="secondary"] {
-    padding-top: 0.05rem !important;
-    padding-bottom: 0.05rem !important;
-}
 </style>
 """, unsafe_allow_html=True)
 
