@@ -65,7 +65,7 @@ def classify(sentences, tokenizer, model):
     return results
 
 st.markdown("<h3 style='text-align: center; margin-bottom: -1rem;'>Dutch Blurb Sentence Classifier</h3>", unsafe_allow_html=True)
-st.markdown("<h4 style='text-align: center; font-weight: normal; font-style: italic;'>Enter a Dutch sentence that could appear in a book blurb.</h4>", unsafe_allow_html=True)
+st.markdown("<h5 style='text-align: center; font-weight: normal; font-style: italic;'>Enter a Dutch sentence that could appear in a book blurb.</h4>", unsafe_allow_html=True)
 st.markdown("""
 <p style='color:#000000; font-size:0.95em'>
 <span style='color:#6AAAD4; font-size:1.2em'>●</span> <b style='color:#6AAAD4'>Content</b>: sentences describing the story, characters, or setting<br>
@@ -73,7 +73,7 @@ st.markdown("""
 </p>
 """, unsafe_allow_html=True)
 
-st.markdown("**Try an example:**")
+st.markdown("**######Try an example:**")
 cols = st.columns(len(EXAMPLES))
 for i, ex in enumerate(EXAMPLES):
     with cols[i]:
@@ -82,7 +82,7 @@ for i, ex in enumerate(EXAMPLES):
         st.caption(ex["en"])
 
 sentence = st.text_area(
-    "**Or enter your own Dutch sentence:**",
+    "**######Or enter your own Dutch sentence:**",
     value=st.session_state.get("input_sentence", ""),
     height=100,
     key="input_sentence"
