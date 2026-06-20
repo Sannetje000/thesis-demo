@@ -11,11 +11,6 @@ TOKENIZER_NAME = "pdelobelle/robbert-v2-dutch-base"
 
 EXAMPLES = [
     {
-        "nl": "Anna vlucht midden in de nacht de stad uit, zonder te weten waar ze naartoe gaat.",
-        "en": "Anna flees the city in the middle of the night, not knowing where she is going.",
-        "expected": "Content"
-    },
-    {
         "nl": "De twee broers groeien op in een klein dorp waar iedereen elkaar kent.",
         "en": "The two brothers grow up in a small village where everyone knows each other.",
         "expected": "Content"
@@ -28,8 +23,7 @@ EXAMPLES = [
     {
         "nl": "Geïllustreerd door de bekroonde kunstenaar Jan de Vries.",
         "en": "Illustrated by award-winning artist Jan de Vries.",
-        "expected": "Non-content"
-    },
+        "expected": "Non-content"},
 ]
 
 @st.cache_resource
@@ -58,8 +52,8 @@ st.markdown("<h2 style='text-align: center;'>Dutch Blurb Sentence Classifier</h2
 st.markdown("<h4 style='text-align: center; font-weight: normal; font-style: italic;'>Enter a Dutch sentence that could appear in a book blurb.</h4>", unsafe_allow_html=True)
 st.markdown("""
 <p style='color:#000000; font-size:0.95em'>
-<span style='color:#6AAAD4; font-size:1.2em'>●</span> <b style='color:#6AAAD4'>Content</b> —> sentences describing the story, characters, or setting<br>
-<span style='color:#E08070; font-size:1.2em'>●</span> <b style='color:#E08070'>Non-content</b> —> promotional text, author credits, critic quotes, or other metadata
+<span style='color:#6AAAD4; font-size:1.2em'>●</span> <b style='color:#6AAAD4'>Content</b>: sentences describing the story, characters, or setting<br>
+<span style='color:#E08070; font-size:1.2em'>●</span> <b style='color:#E08070'>Non-content</b>: promotional text, author credits, critic quotes, or other metadata
 </p>
 """, unsafe_allow_html=True)
 
