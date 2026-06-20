@@ -87,7 +87,6 @@ if st.button("Classify"):
         results = classify(sentences, tokenizer, model)
         for r in results:
             color = "#378ADD" if r["Label"] == "Content" else "#D85A30"
-            ```python
             st.markdown(
                 f"<div style='padding:12px; margin:6px 0; border-radius:8px; background:#c9c0e7; color:#000000; text-align:center;'>"
                 f"<b style='color:{color}; font-size:1.3em'>● {r['Label']} sentence</b><br/>"
@@ -96,4 +95,3 @@ if st.button("Classify"):
                 f"</div>",
                 unsafe_allow_html=True
             )
-```
