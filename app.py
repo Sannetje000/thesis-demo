@@ -14,6 +14,9 @@ p {
     line-height: 1.2;
     padding-left: 0.2rem;
 }
+div[data-testid="stTextArea"] {
+    margin-top: -30px;
+}
 </style>
 """, unsafe_allow_html=True)
 
