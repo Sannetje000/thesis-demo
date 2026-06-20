@@ -54,14 +54,20 @@ def classify(sentences, tokenizer, model):
         results.append({"Sentence": sentence, "P(non-content)": round(prob, 3), "Label": label})
     return results
 
-st.title("📚 Dutch Blurb Sentence Classifier")
-st.write("Enter a Dutch sentence from a book blurb. For best results, enter **one sentence at a time**.")
+st.title("Dutch Blurb Sentence Classifier")
+st.markdown("### Enter a Dutch sentence from a book blurb.")
+st.markdown("""
+<p style='color:#555; font-size:0.95em'>
+🔵 <b style='color:#378ADD'>Content</b> — sentences describing the story, characters, or setting<br>
+🟠 <b style='color:#D85A30'>Non-content</b> — promotional text, author credits, critic quotes, or metadata
+</p>
+""", unsafe_allow_html=True)
 
 st.markdown("**Try an example:**")
 cols = st.columns(len(EXAMPLES))
 for i, ex in enumerate(EXAMPLES):
     with cols[i]:
-        if st.button(f"{'🔵' if ex['expected'] == 'Content' else '🟠'} {ex['nl'][:40]}...", key=f"ex_{i}"):
+        if st.button(f"Example {i+1}", key=f"ex_{i}"):
             st.session_state["input_sentence"] = ex["nl"]
         st.caption(ex["en"])
 
