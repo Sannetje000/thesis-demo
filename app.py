@@ -54,7 +54,7 @@ def classify(sentences, tokenizer, model):
         results.append({"Sentence": sentence, "P(non-content)": round(prob, 3), "Label": label})
     return results
 
-st.title("Dutch Blurb Sentence Classifier")
+st.markdown("### Dutch Blurb Sentence Classifier")
 st.markdown("#### Enter a Dutch sentence that could appear in a book blurb.")
 st.markdown("""
 <p style='color:#555; font-size:0.95em'>
