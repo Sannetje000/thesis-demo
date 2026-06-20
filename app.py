@@ -81,7 +81,7 @@ for i, ex in enumerate(EXAMPLES):
     with cols[i]:
         if st.button(f"Example {i+1}", key=f"ex_{i}"):
             st.session_state["input_sentence"] = ex["nl"]
-        st.markdown("<p style='font-size:1em;font-style: italic;margin-top:-10px;'>"+ex["en"]+"</p>", unsafe_allow_html=True)
+        st.markdown("<p style='font-size:1.2em;font-style: italic;margin-top:-10px;'>"+ex["en"]+"</p>", unsafe_allow_html=True)
 
 st.markdown("<p style='font-weight:bold;margin-bottom:+2px;font-size:1.2em;'>Or enter your own Dutch sentence:</p>", unsafe_allow_html=True)
 
