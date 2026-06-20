@@ -15,7 +15,7 @@ p {
     padding-left: 0.2rem;
 }
 div[data-testid="stTextArea"] {
-    margin-top: -33px;
+    margin-top: -35px;
 }
 </style>
 """, unsafe_allow_html=True)
