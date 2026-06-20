@@ -18,7 +18,7 @@ p {
     background-color: #ffffff !important;
 }
 .stTextArea textarea::placeholder {
-    color: #ffffff !important;
+    color: #9280c8 !important;
     font-style: italic !important;
 }
 div[data-testid="stTextArea"] {
