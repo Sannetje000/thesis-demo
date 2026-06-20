@@ -88,10 +88,9 @@ if st.button("Classify"):
         for r in results:
             color = "#378ADD" if r["Label"] == "Content" else "#D85A30"
             st.markdown(
-                f"<div style='padding:12px; margin:6px 0; border-left: 4px solid {color}; background:#f9f9f9; color:#000000'>"
-                f"<b style='color:{color}; font-size:1.1em'>{r['Label']}</b> "
-                f"<span style='color:#000000; font-size:0.9em'>P(non-content): {r['P(non-content)']}</span><br/><br/>"
-                f"{r['Sentence']}"
+                f"<div style='padding:12px; margin:6px 0; border-radius:8px; background:#c9c0e7; color:#000000; text-align:center;'>"
+                f"<b style='color:{color}; font-size:1.3em'>● {r['Label']}</b><br/>"
+                f"<span style='font-size:0.9em'>P(non-content): {r['P(non-content)']}</span>"
                 f"</div>",
                 unsafe_allow_html=True
             )
