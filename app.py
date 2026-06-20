@@ -17,6 +17,11 @@ p {
     line-height: 1.2;
     padding-left: 0.2rem;
 }
+div[data-testid="stButton"] button {
+    padding-top: 0.15rem;
+    padding-bottom: 0.15rem;
+    font-size: 0.85em;
+}
 </style>
 """, unsafe_allow_html=True)
 
