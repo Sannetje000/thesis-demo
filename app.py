@@ -14,6 +14,10 @@ p {
     line-height: 1.2;
     padding-left: 0.2rem;
 }
+textarea::placeholder {
+    color: #cccccc;
+    font-style: italic;
+}
 div[data-testid="stTextArea"] {
     margin-top: -30px;
 }
@@ -64,7 +68,7 @@ def classify(sentences, tokenizer, model):
         results.append({"Sentence": sentence, "P(non-content)": round(prob, 3), "Label": label})
     return results
 
-st.markdown("<h3 style='margin-bottom: 0rem;'>Dutch Blurb Sentence Classifier</h3>", unsafe_allow_html=True)
+st.markdown("<h3 style='margin-bottom: 0rem;font-weight:bold;'>Dutch Blurb Sentence Classifier</h3>", unsafe_allow_html=True)
 
 st.markdown("<p style='font-weight:bold;margin-bottom:+4px;font-size:1.3em;'>Try an example:</p>", unsafe_allow_html=True)
 cols = st.columns(len(EXAMPLES))
