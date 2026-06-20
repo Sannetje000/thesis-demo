@@ -3,15 +3,34 @@ from transformers import AutoTokenizer, AutoModelForSequenceClassification
 from huggingface_hub import login
 import torch
 import torch.nn.functional as F
-import nltk
 import re
-
-nltk.download("punkt", quiet=True)
-nltk.download("punkt_tab", quiet=True)
 
 THRESHOLD = 0.62
 MODEL_NAME = "Sanneeeeeeeee/robert-blurb-classifier"
 TOKENIZER_NAME = "pdelobelle/robbert-v2-dutch-base"
+
+EXAMPLES = [
+    {
+        "nl": "Anna vlucht midden in de nacht de stad uit, zonder te weten waar ze naartoe gaat.",
+        "en": "Anna flees the city in the middle of the night, not knowing where she is going.",
+        "expected": "Content"
+    },
+    {
+        "nl": "De twee broers groeien op in een klein dorp waar iedereen elkaar kent.",
+        "en": "The two brothers grow up in a small village where everyone knows each other.",
+        "expected": "Content"
+    },
+    {
+        "nl": "Een meeslepend debuut van een veelbelovende nieuwe stem in de Nederlandse literatuur.",
+        "en": "A gripping debut from a promising new voice in Dutch literature.",
+        "expected": "Non-content"
+    },
+    {
+        "nl": "Geïllustreerd door de bekroonde kunstenaar Jan de Vries.",
+        "en": "Illustrated by award-winning artist Jan de Vries.",
+        "expected": "Non-content"
+    },
+]
 
 @st.cache_resource
 def load_model():
@@ -32,27 +51,41 @@ def classify(sentences, tokenizer, model):
             outputs = model(**inputs)
         prob = F.softmax(outputs.logits, dim=1)[0][1].item()
         label = "Non-content" if prob >= THRESHOLD else "Content"
-        results.append({"Sentence": sentence, "P(content)": round(prob, 3), "Label": label})
+        results.append({"Sentence": sentence, "P(non-content)": round(prob, 3), "Label": label})
     return results
 
-st.title("📚 Dutch Blurb Classifier")
-st.write("Paste a Dutch book blurb below. Each sentence will be classified as **content** or **non-content**.")
+st.title("📚 Dutch Blurb Sentence Classifier")
+st.write("Enter a Dutch sentence from a book blurb. For best results, enter **one sentence at a time**.")
 
-blurb = st.text_area("Dutch blurb", height=200)
+st.markdown("**Try an example:**")
+cols = st.columns(len(EXAMPLES))
+for i, ex in enumerate(EXAMPLES):
+    with cols[i]:
+        if st.button(f"Example {i+1}", key=f"ex_{i}"):
+            st.session_state["input_sentence"] = ex["nl"]
+        st.caption(ex["en"])
+
+sentence = st.text_area(
+    "Dutch sentence",
+    value=st.session_state.get("input_sentence", ""),
+    height=100,
+    key="input_sentence"
+)
 
 if st.button("Classify"):
-    if not blurb.strip():
-        st.warning("Please enter a blurb.")
+    if not sentence.strip():
+        st.warning("Please enter a sentence.")
     else:
         tokenizer, model = load_model()
-        sentences = split_sentences(blurb)
+        sentences = split_sentences(sentence)
         results = classify(sentences, tokenizer, model)
-        
         for r in results:
             color = "#378ADD" if r["Label"] == "Content" else "#D85A30"
             st.markdown(
-                f"<div style='padding:8px; margin:4px 0; border-left: 4px solid {color}; background:#000000'>"
-                f"<b style='color:{color}'>{r['Label']}</b> (p={r['P(content)']})<br>{r['Sentence']}"
+                f"<div style='padding:12px; margin:6px 0; border-left: 4px solid {color}; background:#f9f9f9; color:#000000'>"
+                f"<b style='color:{color}; font-size:1.1em'>{r['Label']}</b> "
+                f"<span style='color:#555; font-size:0.9em'>P(non-content): {r['P(non-content)']}</span><br/><br/>"
+                f"{r['Sentence']}"
                 f"</div>",
                 unsafe_allow_html=True
             )
