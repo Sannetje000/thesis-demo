@@ -88,7 +88,7 @@ sentence = st.text_area(
     value=st.session_state.get("input_sentence", ""),
     height=100,
     key="input_sentence",
-    placeholder="Type a Dutch sentence or select an example"
+    placeholder="Type a Dutch sentence that could appear in a blurb (content or non--content) or select an example"
 )
 
 if st.button("Classify"):
