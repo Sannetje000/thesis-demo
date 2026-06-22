@@ -73,7 +73,7 @@ def classify(sentences, tokenizer, model):
 
 st.markdown("<h3 style='margin-bottom: 0rem;font-weight:bold;'>Dutch Blurb Sentence Classifier</h3>", unsafe_allow_html=True)
 
-st.markdown("<p style='font-weight:bold;margin-bottom:+4px;font-size:1.2em;'>Try an example:</p>", unsafe_allow_html=True)
+st.markdown("<p style='font-weight:bold;margin-bottom:+4px;font-size:1.2em;'>Try a real blurb sentence:</p>", unsafe_allow_html=True)
 cols = st.columns(len(EXAMPLES))
 for i, ex in enumerate(EXAMPLES):
     with cols[i]:
