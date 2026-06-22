@@ -33,18 +33,18 @@ TOKENIZER_NAME = "pdelobelle/robbert-v2-dutch-base"
 
 EXAMPLES = [
     {
-        "nl": "De twee broers groeien op in een klein dorp waar iedereen elkaar kent.",
-        "en": "The two brothers grow up in a small village where everyone knows each other.",
+         "nl": "Wanneer Nova op een onbekende plaats ontwaakt, weet ze niet meer wie ze is, noch waar ze vandaan komt.",
+        "en": "When Nova wakes up in an unknown place, she no longer knows who she is or where she came from.",
         "expected": "Content"
     },
     {
-    "nl": "Een ontroerend verhaal over verlies en hoe een gezin elkaar terugvindt.",
-    "en": "A touching story about loss and how a family finds each other again.",
-    "expected": "Content"
+        "nl": "Sinds haar jeugd is ze verslingerd aan boeken.",
+        "en": "Since her childhood, she has been passionate about books.",
+        "expected": "Non-content"
     },
     {
-        "nl": "Een meeslepend debuut van een veelbelovende nieuwe stem in de Nederlandse literatuur.",
-        "en": "A gripping debut from a promising new voice in Dutch literature.",
+        "nl": "De pers over Julia Navarro: 'Een grote roman' de Volkskrant 'Over romantiek in tijden van ellende.'",
+        "en": "The press about Julia Navarro: 'A great novel' de Volkskrant 'About romance in times of misery.'",
         "expected": "Non-content"
     },
 ]
