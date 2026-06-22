@@ -38,13 +38,13 @@ EXAMPLES = [
         "expected": "Content"
     },
     {
-        "nl": "Een meeslepend debuut van een veelbelovende nieuwe stem in de Nederlandse literatuur.",
-        "en": "A gripping debut from a promising new voice in Dutch literature.",
-        "expected": "Non-content"
+    "nl": "Een ontroerend verhaal over verlies en hoe een gezin elkaar terugvindt.",
+    "en": "A touching story about loss and how a family finds each other again.",
+    "expected": "Content"
     },
     {
-        "nl": "Geïllustreerd door de bekroonde kunstenaar Jan de Vries.",
-        "en": "Illustrated by award-winning artist Jan de Vries.",
+        "nl": "Een meeslepend debuut van een veelbelovende nieuwe stem in de Nederlandse literatuur.",
+        "en": "A gripping debut from a promising new voice in Dutch literature.",
         "expected": "Non-content"
     },
 ]
